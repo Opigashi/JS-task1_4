@@ -29,29 +29,3 @@ alert('新しいタスクを追加しました');
 
 showTitle();
 listUp();
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const listUp = () => {
-//     for (let i = 0; i < tasks.length; i++) {
-//         console.log(i + '：' + tasks[i]);
-//     }
-// }
-
-// showTitle();
-// listUp();
-
-// tasks.push(prompt('タスクを入力してください'));
-
-// showTitle();
-// listUp();
