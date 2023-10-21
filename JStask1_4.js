@@ -13,11 +13,24 @@ const tasks = {
 
 };
 
-const entries = Object.entries(tasks);
+const listUp = () => {
+    const entries = Object.entries(tasks);
 
-entries.forEach((prop) => {
-    console.log(`${prop[0]} : ${prop[1]}`);
+        entries.forEach((prop, index) => {
+            console.log(`${index} : [内容]${prop[0]}、[ジャンル]${prop[1]}`);
 });
+}
+
+showTitle();
+listUp();
+
+tasks[prompt('タスクを入力してください')] = prompt('ジャンルを入力してください');
+alert('新しいタスクを追加しました');
+
+showTitle();
+listUp();
+
+
 
 
 
