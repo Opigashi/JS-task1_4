@@ -6,26 +6,35 @@ const showTitle = () => {
     console.log('=====================');
 }
 
-const tasks = {
-    '机を片付ける':'掃除',
-    '牛乳を買う':'買い物',
-    '散歩する':'運動',
-
-};
+const tasks = [
+    {
+        genre: '掃除',
+        content: '机を片付ける'
+    },
+    {
+        genre: '買い物',
+        content: '牛乳を買う'
+    },
+    {
+        genre: '運動',
+        content: '散歩をする'
+    },
+];
 
 const listUp = () => {
-    const entries = Object.entries(tasks);
-
-        entries.forEach((prop, index) => {
-            console.log(`${index} : [内容]${prop[0]}、[ジャンル]${prop[1]}`);
+    tasks.forEach((task, index) => {
+    console.log(`${index} : [内容]${task.content}、[ジャンル]${task.genre}`);
 });
 }
 
 showTitle();
 listUp();
 
-tasks[prompt('タスクを入力してください')] = prompt('ジャンルを入力してください');
+const addContent = prompt('タスクを入力してください');
+const addGenre = prompt('ジャンルを入力してください');
 alert('新しいタスクを追加しました');
+
+tasks.push({genre: addGenre, content: addContent});
 
 showTitle();
 listUp();
