@@ -1,9 +1,7 @@
 'use strict';
 
 const showTitle = () => {
-    console.log('=====================');
-    console.log('現在持っているタスクの一覧');
-    console.log('=====================');
+    console.log('=====================\n現在持っているタスクの一覧\n=====================');
 }
 
 const tasks = [
